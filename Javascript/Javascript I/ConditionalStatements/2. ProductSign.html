@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Problem 2</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	
+
+	    <div>
+                <label>Enter first number: </label>
+                <input type="text" id="Fnumber"/> 
+                <label>Enter second number: </label>
+                <input type="text" id="Snumber"/> 
+                <label>Enter third number: </label>
+                <input type="text" id="Tnumber"/>              
+        </div>
+        <div>
+            <label>Check sign : </label>
+            <input type="button" value="Check" onclick="Sign()" />
+        </div>
+    
+      
+    <script>
+        function Sign() {
+            var Fnumber = jsConsole.readFloat("#Fnumber");
+            var Snumber = jsConsole.readFloat("#Snumber");
+            var Tnumber = jsConsole.readFloat("#Tnumber");
+
+            if ((Fnumber > 0 || Snumber > 0 || Tnumber > 0) || (Fnumber > 0 && Snumber > 0 && Tnumber > 0)) {
+                jsConsole.writeLine("The product of " + Fnumber + ", " + Snumber + " and " + Tnumber + " is positive.");
+            }
+            else {
+                jsConsole.writeLine("The product of " + Fnumber + ", " + Snumber + " and " + Tnumber + " is negative.");
+            }
+
+
+        }
+    </script>
+
+</body>
+</html>

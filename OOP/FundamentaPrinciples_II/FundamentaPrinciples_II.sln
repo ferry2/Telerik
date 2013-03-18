@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundamentaPrinciples_II", "FundamentaPrinciples_II\FundamentaPrinciples_II.csproj", "{8B3986EB-2CDE-44CA-A115-5D7A49485373}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccounts", "BankAccounts\BankAccounts.csproj", "{A9097351-03A7-46D4-8720-97A90E6DA065}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvalidException", "InvalidException\InvalidException.csproj", "{36050EFB-0FE0-4FE5-9E75-350A09456684}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B3986EB-2CDE-44CA-A115-5D7A49485373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B3986EB-2CDE-44CA-A115-5D7A49485373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B3986EB-2CDE-44CA-A115-5D7A49485373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B3986EB-2CDE-44CA-A115-5D7A49485373}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9097351-03A7-46D4-8720-97A90E6DA065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9097351-03A7-46D4-8720-97A90E6DA065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9097351-03A7-46D4-8720-97A90E6DA065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9097351-03A7-46D4-8720-97A90E6DA065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36050EFB-0FE0-4FE5-9E75-350A09456684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36050EFB-0FE0-4FE5-9E75-350A09456684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36050EFB-0FE0-4FE5-9E75-350A09456684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36050EFB-0FE0-4FE5-9E75-350A09456684}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
