@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Problem 2</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	
+
+	    <div>
+                <label>Enter value for N: </label>
+                <input type="text" id="number"/>                              
+        </div>
+        <div>
+            <label>Print numbers from 1 to N : </label>
+            <input type="button" value="Print" onclick="PrintNotDivisible()" />
+        </div>
+    
+      
+    <script>
+        function PrintNotDivisible() {
+            var number = jsConsole.readInteger("#number");
+
+            for (var i = 1; i <= number; i++) {
+                if (!((i % 3 == 0) && (i % 7 == 0))) {
+
+                    jsConsole.writeLine(i);
+                }                
+            }
+        }
+    </script>
+
+</body>
+</html>
