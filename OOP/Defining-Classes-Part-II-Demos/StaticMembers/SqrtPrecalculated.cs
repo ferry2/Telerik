@@ -5,20 +5,20 @@ class SqrtPrecalculated
     public const int MAX_VALUE = 10000;
         
     // Static field
-    private static int[] sqrtValues; 
+    private static double[] sqrtValues; 
 
     // Static constructor 
     static SqrtPrecalculated()
     {
-        sqrtValues = new int[MAX_VALUE + 1];
+        sqrtValues = new double[MAX_VALUE + 1];
         for (int i = 0; i < sqrtValues.Length; i++)
         {
-            sqrtValues[i] = (int)Math.Sqrt(i);
+            sqrtValues[i] = Math.Sqrt(i);
         }
     }
 
     // Static method 
-    public static int GetSqrt(int value)
+    public static double GetSqrt(int value)
     {
         return sqrtValues[value];
     }
@@ -26,6 +26,6 @@ class SqrtPrecalculated
     // The Main() method is always static
     static void Main()
     {
-		Console.WriteLine(SqrtPrecalculated.GetSqrt(254));
+		Console.WriteLine(SqrtPrecalculated.GetSqrt(78));
     } 
 }

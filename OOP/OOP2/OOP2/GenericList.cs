@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace OOP2
-{    
+{
     public class GenericList<T>
     {
         private static readonly int MAX_CAPACITY = 5;
@@ -25,7 +25,7 @@ namespace OOP2
 
         public void Add(T element)
         {
-            if(count == arrList.Length)
+            if(count <= arrList.Length)
             {
                 ExtendArray();
             }
@@ -106,8 +106,6 @@ namespace OOP2
                 this.arrList[index] = value; 
             }
         }
-
-        
 
         public override string ToString()
         {

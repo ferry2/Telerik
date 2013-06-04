@@ -17,7 +17,10 @@ namespace Hierarchy
                 new Frog("Jaburana", 19, _Sex.Female),
                 new Frog("Frog", 1, _Sex.Male),
                 new Frog("Darvesna jaba", 7, _Sex.Male)
-            };            
+            };
+
+            //var aveFrog = (from jaba in frog
+            //               select jaba.Age).Average();
             AverageAge(frog);
             
 
@@ -29,8 +32,11 @@ namespace Hierarchy
                 new Dog("Pekinez", 9, _Sex.Male),
                 new Dog("pitbull", 24, _Sex.Female)
             };
-            AverageAge(dog);
-            
+
+            var aveDog = (from kuche in dog
+                          select kuche.Age).Average();
+            Console.WriteLine("The average age in dogs is {0} г.", aveDog);
+
             Cat[] cat = new Cat[]
             {
                 new Cat("Siam", 4, _Sex.Female),        
@@ -39,7 +45,10 @@ namespace Hierarchy
                 new Cat("Suzi", 3, _Sex.Male),
                 new Cat("Mutzi", 9, _Sex.Male)
             };
-            AverageAge(cat);
+
+            var aveCat = (from kotka in cat
+                          select kotka.Age).Average();
+            Console.WriteLine("The average age in cats is {0} г.", aveCat);
 
             Kitten[] kitten = new Kitten[]
             {
@@ -49,7 +58,10 @@ namespace Hierarchy
                 new Kitten("Loli", 2, _Sex.Female),
                 new Kitten("Susi", 26, _Sex.Female)
             };
-            AverageAge(kitten);
+
+            var aveKitten = (from kotence in kitten
+                             select kotence.Age).Average();
+            Console.WriteLine("The average age in kittens is {0} г.", aveKitten);
 
             Tomcat[] tomcat = new Tomcat[]
             {
@@ -59,14 +71,17 @@ namespace Hierarchy
                 new Tomcat("Rijo", 10, _Sex.Male),
                 new Tomcat("Vasko", 7, _Sex.Male)
             };
-            AverageAge(tomcat);
+
+            var aveTomcat = (from tom in tomcat
+                             select tom.Age).Average();
+            Console.WriteLine("The average age in tomcats is {0} г.", aveTomcat);
         }
 
         public static void AverageAge(Animal[] animals)
         {
             var average = (from animal in animals
                              select animal.Age).Average();
-            Console.WriteLine("The average age of {0} is {1} г.", animals.GetType().Name, average);
+            Console.WriteLine("The average age in {0} is {1} г.",animals.GetType().GetElementType(), average);
         }
     }
 }

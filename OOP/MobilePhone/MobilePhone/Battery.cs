@@ -17,42 +17,21 @@ namespace MobilePhone
         public string Model
         {
             get { return this.model; }
-            set 
-            {
-                if (String.IsNullOrWhiteSpace(value))
-                {
-                    throw new ArgumentException("Моля въведете модел батерия!");
-                } 
-                this.model = value; 
-            }
+            set { this.model = value; }
         }
 
         private double hoursIdle = 0;
         public double HoursIdle
         {
             get { return this.hoursIdle; }
-            set 
-            { 
-                if(value <= 0)
-                {
-                    throw new ArgumentException("Моля въведете валидна стойност!");
-                }
-                this.hoursIdle = value; 
-            }
+            set { this.hoursIdle = value; }
         }
 
         private double hoursTalk = 0;
         public double HoursTalk
         {
             get { return this.hoursTalk; }
-            set 
-            {
-                if (value <= 0)
-                {
-                    throw new ArgumentException("Моля въведете валидна стойност!");
-                }
-                this.hoursTalk = value; 
-            }
+            set { this.hoursTalk = value; }
         }
                 
         public Battery()

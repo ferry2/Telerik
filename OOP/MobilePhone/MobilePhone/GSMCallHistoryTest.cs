@@ -16,7 +16,7 @@ namespace MobilePhone
         string[] times = { "12:33:45", "01:54:03", "16:24:22", "11:31:51", "09:00:17" };
         string[] phoneNumbers = { "0899152641", "0888426837", "0885124796", "0896123458", "0887442156" };
         int[] seconds = { 44, 851, 752, 453, 312 };
-        
+
         public void DataFill()
         {
             for(int i = 1; i < calls.Length ; i++)
@@ -30,7 +30,7 @@ namespace MobilePhone
         {
             for(int i = 0; i < gsmInstance.CallHistory.Count; i++)
             {
-                Console.WriteLine("Дата: {0} \n\nЧас: {1} ч. \n\nТелефонен номер: {2} \n\nПродължителност: {3} сек.", 
+                Console.WriteLine("Date: {0}, \n\nTime: {1}, \n\nPhone number: {2}, \n\nDuration: {3}", 
                     gsmInstance.CallHistory[i].Date, 
                     gsmInstance.CallHistory[i].Time,
                     gsmInstance.CallHistory[i].PhoneNumber, 
@@ -38,44 +38,11 @@ namespace MobilePhone
             }
 
             Console.WriteLine("____________________________________________________________________________\n");
-            Console.WriteLine("Крайната сума за плащане е: {0} лв.", gsmInstance.TotalPrice(0.37));                        
-        }
+            Console.WriteLine("The total sum is: {0}", gsmInstance.TotalPrice(0.37));
 
-        public void RemoveTheLongest()
-        {            
-            int longest = 0;
-
-            for(int i = 0; i < gsmInstance.CallHistory.Count; i++)
+            for (int i = 0; i < gsmInstance.CallHistory.Count; i++)
             {
-                if(gsmInstance.CallHistory[i].Duration > longest)
-                {
-                    longest = gsmInstance.CallHistory[i].Duration;
-                    gsmInstance.DeleteCall(gsmInstance.CallHistory[i]);
-                    break;
-                }              
-            }
-
-            Console.WriteLine("След като е премахнат най-дългия разговор({0} сек.), крайната сума за плащане е: {1} лв.", longest, gsmInstance.TotalPrice(0.37));
-        }
-
-        public void ClearCallHistory()
-        {
-            gsmInstance.CallHistory.Clear();
-
-            if (gsmInstance.CallHistory.Count == 0)
-            {
-                Console.WriteLine("Списъкът с разговори е празен!");
-            }
-            else
-            {
-                for (int i = 0; i < gsmInstance.CallHistory.Count; i++)
-                {
-                    Console.WriteLine("Историята на разговорите е: Date: {0}, \n\nTime: {1}, \n\nPhone number: {2}, \n\nDuration: {3}",
-                        gsmInstance.CallHistory[i].Date,
-                        gsmInstance.CallHistory[i].Time,
-                        gsmInstance.CallHistory[i].PhoneNumber,
-                        gsmInstance.CallHistory[i].Duration);
-                }
+                
             }
         }
     }

@@ -74,25 +74,5 @@ namespace FundamentalPrinciples_Part_I
             this.teachers.Add(_teacher);
             this.comment = _comment;
         }
-
-        public void AddStudent(Student student)
-        {
-            foreach (Student item in students)
-            {
-                if (item.ClassNumber == student.ClassNumber)
-                {
-                    throw new ArgumentException("Already exist student with this class number.");
-                }    
-                else
-                {
-                    this.students.Add(student);
-                }
-            }                       
-        }
-
-        public void AddTeacher(Teacher teacher)
-        {
-            this.teachers.Add(teacher);
-        }
     }
 }

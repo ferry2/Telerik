@@ -12,56 +12,28 @@ namespace MobilePhone
         public string Model
         {
             get { return this.model; }
-            set 
-            {   
-                if(String.IsNullOrWhiteSpace(value))
-                {
-                    throw new ArgumentException("Моля въведете модел телефон!");
-                }
-                this.model = value;                
-            }
+            set { this.model = value; }
         }
 
         private string manufacturer = null;
         public string Manufacturer
         {
             get { return this.manufacturer; }
-            set 
-            {
-                if (String.IsNullOrWhiteSpace(value))
-                {
-                    throw new ArgumentException("Моля въведете производител!");
-                }                
-                this.manufacturer = value; 
-            }
+            set { this.manufacturer = value; }
         }
 
         private decimal price = 0.00m;
         public decimal Price
         {
             get { return this.price; }
-            set 
-            {
-                if (value <= 0)
-                {
-                    throw new ArgumentException("Моля въведете валидна цена!");
-                } 
-                this.price = value; 
-            }
+            set { this.price = value; }
         }
 
         private string owner = null;
         public string Owner
         {
             get { return this.owner; }
-            set 
-            {
-                if (String.IsNullOrWhiteSpace(value))
-                {
-                    throw new ArgumentException("Моля въведете име на собственик!");
-                } 
-                this.owner = value; 
-            }
+            set { this.owner = value; }
         }
 
         private Battery batteryInfo = null;
@@ -84,7 +56,7 @@ namespace MobilePhone
             get { return this.callHistory; }
         }
 
-        private static GSM iPhone4S = new GSM("iPhone4S", "Apple", 969, "Владислав Николов Найденов", 
+        private static GSM iPhone4S = new GSM("iPhone4S", "Apple", 969, "Vladislav Nikolov Naydenov", 
             new Battery("cRU", 200, 8, BatteryType.LiIon), new Display(3.5, 16000000));        
         public static GSM IPhone4S
         {
@@ -144,13 +116,31 @@ namespace MobilePhone
             this.batteryInfo = _batteryInfo;
             this.displayInfo = _displayInfo;
             this.callHistory = _callHistory;
-        }        
+        }
+
+        public void PrintInfo()
+        {
+            Console.WriteLine("Model: {0}", this.Model);
+            Console.WriteLine("Manufacturer: {0}", this.Manufacturer);
+            Console.WriteLine("Price: {0}", this.Price);
+            Console.WriteLine("Owner: {0}", this.Owner);
+            Console.WriteLine("Battery information:");
+            Console.WriteLine("Model: {0}", this.BatteryInfo.Model);
+            Console.WriteLine("Hours idle: {0}", this.BatteryInfo.HoursIdle);
+            Console.WriteLine("Hours talk: {0}", this.BatteryInfo.HoursTalk);
+            Console.WriteLine("Display information:");
+            Console.WriteLine("Display size: {0}", this.DisplayInfo.Size);
+            Console.WriteLine("Display colors: {0}", this.DisplayInfo.NumberOfColors);
+        }
 
         public override string ToString()
         {
-            return string.Format("Модел: {0} \nПроизводител: {1} \nЦена: {2} лв. \nСобственик: {3} \n\nИнформация за батерията: \nМодел: {4} \nРежим готовност: {5} ч. \nРежим на разговор: {6} ч. \n\nИнформация за дисплея: \nРазмер: {7} инча \nЦветове: {8}",
-                this.Model, this.Manufacturer, this.Price, this.Owner, this.BatteryInfo.Model, this.BatteryInfo.HoursIdle,
-                this.BatteryInfo.HoursTalk, this.DisplayInfo.Size, this.DisplayInfo.NumberOfColors);            
+            return "Model: " + this.Model + "\n" + "Manufacturer: " + this.Manufacturer +
+                "\n" + "Price: " + this.Price + "\n" + "Owner: " + this.Owner +
+                "\n\n" + "Battery information:\n" + "Model: " + this.BatteryInfo.Model +
+                "\n" + "Hours idle: " + this.BatteryInfo.HoursIdle + "\n" +
+                "Hours talk: " + this.BatteryInfo.HoursTalk + "\n\n" + "Display information:\n" +
+                "Display size: " + this.DisplayInfo.Size + "\n" + "Display colors: " + this.DisplayInfo.NumberOfColors + "\n";
         }
 
         public List<Call> AddCall(Call call)
@@ -172,14 +162,16 @@ namespace MobilePhone
         }
 
         public double TotalPrice(double price)
-        {                        
+        {            
+            double secondsToMinutes = 0.0;
             double total = 0;
 
             if (price > 0)
             {
                 for (int i = 0; i < CallHistory.Count; i++)
                 {
-                    total += (callHistory[i].Duration / 60) * price;                    
+                    secondsToMinutes += callHistory[i].Duration / 60;
+                    total += secondsToMinutes * price;
                 }
             }
 
