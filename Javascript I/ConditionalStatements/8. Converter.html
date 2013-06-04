@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Problem 8</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	
+
+	    <div>
+                <label>Enter number: </label>
+                <input type="text" id="a"/>                                               
+        </div>
+        <div>
+            <label>Convert : </label>
+            <input type="button" value="Convert" onclick="Converter()" />
+        </div>
+    
+      
+    <script>
+        function Converter() {
+            var a = jsConsole.readFloat("#a");            
+
+        }
+    </script>
+
+</body>
+</html>

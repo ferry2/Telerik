@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Problem 5</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	
+
+	    <div>
+                <label>Enter number: </label>
+                <input type="text" id="Fnumber"/>                               
+        </div>
+        <div>
+            <label>Show name : </label>
+            <input type="button" value="Show" onclick="ShowTheName()" />
+        </div>
+    
+      
+    <script>
+        function ShowTheName() {
+            var Fnumber = jsConsole.readInteger("#Fnumber");
+                        
+                switch (Fnumber) {
+                    case 0:
+                        {
+                            jsConsole.writeLine("The name of the digit is ZERO!");
+                            break;
+                        }
+                    case 1:
+                        {
+                            jsConsole.writeLine("The name of the digit is ONE!");
+                            break;
+                        }
+                    case 2:
+                        {
+                            jsConsole.writeLine("The name of the digit is TWO!");
+                            break;
+                        }
+                    case 3:
+                        {
+                            jsConsole.writeLine("The name of the digit is THREE!");
+                            break;
+                        }
+                    case 4:
+                        {
+                            jsConsole.writeLine("The name of the digit is FOUR!");
+                            break;
+                        }
+                    case 5:
+                        {
+                            jsConsole.writeLine("The name of the digit is FIVE!");
+                            break;
+                        }
+                    case 6:
+                        {
+                            jsConsole.writeLine("The name of the digit is SIX!");
+                            break;
+                        }
+                    case 7:
+                        {
+                            jsConsole.writeLine("The name of the digit is SEVEN!");
+                            break;
+                        }
+                    case 8:
+                        {
+                            jsConsole.writeLine("The name of the digit is EIGHT!");
+                            break;
+                        }
+                    default:
+                        {
+                            jsConsole.writeLine("The name of the digit is NINE!");
+                        }                
+            }            
+            
+        }
+    </script>
+
+</body>
+</html>

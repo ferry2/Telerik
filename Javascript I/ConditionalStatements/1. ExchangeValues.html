@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Problem 1</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	
+
+	    <div>
+                <label>Enter first number: </label>
+                <input type="text" id="Fnumber"/> 
+                <label>Enter second number: </label>
+                <input type="text" id="Snumber"/>               
+        </div>
+        <div>
+            <label>Exchange : </label>
+            <input type="button" value="Exchange" onclick="Exchange()" />
+        </div>
+    
+      
+    <script>
+        function Exchange() {
+            var Fnumber = jsConsole.readInteger("#Fnumber");
+            var Snumber = jsConsole.readInteger("#Snumber");
+
+            if (Fnumber > Snumber) {
+                Fnumber = Fnumber + Snumber;
+                Snumber = Fnumber - Snumber;
+                Fnumber = Fnumber - Snumber;
+
+                jsConsole.writeLine("The first number is greater than the second and now the first is " + Fnumber + " and the second is " + Snumber);
+            }
+            else {
+                jsConsole.writeLine("The first number is smaller than the second.");
+            }
+ 
+            
+        } 
+    </script>
+
+</body>
+</html>

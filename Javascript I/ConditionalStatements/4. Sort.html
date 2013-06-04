@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Problem 4</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	
+
+	    <div>
+                <label>Enter first number: </label>
+                <input type="text" id="Fnumber"/> 
+                <label>Enter second number: </label>
+                <input type="text" id="Snumber"/> 
+                <label>Enter third number: </label>
+                <input type="text" id="Tnumber"/>              
+        </div>
+        <div>
+            <label>Find the biggest : </label>
+            <input type="button" value="Find" onclick="FindBiggest()" />
+        </div>
+    
+      
+    <script>
+        function FindBiggest() {
+            var Fnumber = jsConsole.readInteger("#Fnumber");
+            var Snumber = jsConsole.readInteger("#Snumber");
+            var Tnumber = jsConsole.readInteger("#Tnumber");
+            var Biggest = 0;
+
+            for (var i = 0; i < 2; i++) {
+
+                if (Fnumber < Snumber) {
+                    Biggest = Snumber;
+                    Snumber = Fnumber;
+                    Fnumber = Biggest;
+                    if (Fnumber < Tnumber) {
+                        Biggest = Tnumber;
+                        Tnumber = Fnumber;
+                        Fnumber = Biggest;
+                    }
+                }
+                else {
+                    if (Snumber < Tnumber) {
+                        Biggest = Tnumber;
+                        Tnumber = Snumber;
+                        Snumber = Biggest;
+                    }
+                }
+            }
+
+            jsConsole.writeLine("Sorted descending: " + Fnumber + ", " + Snumber + ", " + Tnumber);
+        }
+    </script>
+
+</body>
+</html>

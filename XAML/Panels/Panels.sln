@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panels", "Panels\Panels.csproj", "{D3F1F233-ABB6-4540-B618-89E243B57B9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MorePanels", "MorePanels\MorePanels.csproj", "{528876D7-82DB-4313-B58E-BAFD1151A3E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightPanels", "SilverlightPanels\SilverlightPanels.csproj", "{E732DBF6-BFFA-433A-A2DF-29731AA3DDEC}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SilverlightPanels.Web", "http://localhost:18928", "{8BBA94D1-20FE-4313-9E24-294B1F5DCED1}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_18928"
+		Debug.AspNetCompiler.PhysicalPath = "SilverlightPanels.Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_18928\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_18928"
+		Release.AspNetCompiler.PhysicalPath = "SilverlightPanels.Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_18928\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "SilverlightPanels.Web\"
+		DefaultWebSiteLanguage = "Visual C#"
+		ProjOutputReferences = "{E732DBF6-BFFA-433A-A2DF-29731AA3DDEC}|ClientBin|false;"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3F1F233-ABB6-4540-B618-89E243B57B9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3F1F233-ABB6-4540-B618-89E243B57B9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3F1F233-ABB6-4540-B618-89E243B57B9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3F1F233-ABB6-4540-B618-89E243B57B9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{528876D7-82DB-4313-B58E-BAFD1151A3E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{528876D7-82DB-4313-B58E-BAFD1151A3E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{528876D7-82DB-4313-B58E-BAFD1151A3E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{528876D7-82DB-4313-B58E-BAFD1151A3E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E732DBF6-BFFA-433A-A2DF-29731AA3DDEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E732DBF6-BFFA-433A-A2DF-29731AA3DDEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E732DBF6-BFFA-433A-A2DF-29731AA3DDEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E732DBF6-BFFA-433A-A2DF-29731AA3DDEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BBA94D1-20FE-4313-9E24-294B1F5DCED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BBA94D1-20FE-4313-9E24-294B1F5DCED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BBA94D1-20FE-4313-9E24-294B1F5DCED1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BBA94D1-20FE-4313-9E24-294B1F5DCED1}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

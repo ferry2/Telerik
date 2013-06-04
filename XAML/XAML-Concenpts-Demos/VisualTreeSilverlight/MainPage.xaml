@@ -1,0 +1,43 @@
+﻿<UserControl xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"  x:Class="VisualTreeSilverlight.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" MouseLeftButtonDown="Window_MouseLeftButtonDown"
+             d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Name="FirstStackPanel" Grid.Row="0" Grid.Column="0" Background="Green">
+            <TextBlock Text="Some Text" Foreground="Yellow"/>
+            <sdk:Label Content="Pesho"/>
+        </StackPanel>
+        <Border Grid.Row="0" Grid.Column="1" BorderBrush="Pink" BorderThickness="2">
+            <!--<toolkit:DockPanel  Background="Blue" LastChildFill="True">
+                <TextBlock toolkit:DockPanel.Dock="Right" Text="Some text in a box to the Right" TextWrapping="Wrap"/>
+                <sdk:Label toolkit:DockPanel.Dock="Bottom" Content="Some Button in the Bottom" />
+                <TextBlock toolkit:DockPanel.Dock="Left" Text="Some text in a box to the Left" TextWrapping="Wrap"/>
+            </toolkit:DockPanel>-->
+        </Border>
+        <StackPanel Name="SecondStackPanel" Grid.Row="1" Grid.Column="0" Background="Red" >
+            <sdk:Label Content=" {0,0} " HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <sdk:Label Content=" {0,1} " HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <sdk:Label Content=" {1,0} " HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <sdk:Label Content=" {1,1} " HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Name="ThirdStackPanel"  Grid.Row="1" Grid.Column="1">
+            <sdk:Label Content="Click me" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <StackPanel Name="FourthStackPanel" >
+                <TextBlock Text="Visual Tree:"/>
+                <TextBlock Name="TextBlockVisualResult" TextWrapping="Wrap"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
