@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. LinearDataStructures", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. PushInTheStack", "2. PushInTheStack\2. PushInTheStack.csproj", "{5D2B34F1-29DC-4424-AD77-4F2523B684E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingNumbers", "SortingNumbers\SortingNumbers.csproj", "{EB340746-3BF2-4565-BFE5-F35596513D14}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{5D2B34F1-29DC-4424-AD77-4F2523B684E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D2B34F1-29DC-4424-AD77-4F2523B684E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D2B34F1-29DC-4424-AD77-4F2523B684E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB340746-3BF2-4565-BFE5-F35596513D14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB340746-3BF2-4565-BFE5-F35596513D14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB340746-3BF2-4565-BFE5-F35596513D14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB340746-3BF2-4565-BFE5-F35596513D14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
