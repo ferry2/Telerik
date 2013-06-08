@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. LongestSubSequence", "Lo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongestSubSequenceTest", "LongestSubSequenceTest\LongestSubSequenceTest.csproj", "{D804A424-EA9D-46D0-A687-BEE6F79949D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.RemoveNegative", "5.RemoveNegative\5.RemoveNegative.csproj", "{92100C93-A249-4322-A9B0-F87142A531F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{D804A424-EA9D-46D0-A687-BEE6F79949D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D804A424-EA9D-46D0-A687-BEE6F79949D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D804A424-EA9D-46D0-A687-BEE6F79949D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92100C93-A249-4322-A9B0-F87142A531F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92100C93-A249-4322-A9B0-F87142A531F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92100C93-A249-4322-A9B0-F87142A531F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92100C93-A249-4322-A9B0-F87142A531F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
