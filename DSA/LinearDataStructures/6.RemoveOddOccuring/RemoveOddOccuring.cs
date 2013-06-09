@@ -27,14 +27,11 @@ namespace _6.RemoveOddOccuring
                 }
             } while (number != string.Empty);
 
-            int count = 0;
-            int current = 0;
-
-            for (int i = 0; i < list.Count; i++)
+            foreach (int t in list)
             {
-                current = list[i];
+                int current = t;
 
-                count = list.FindAll(n => n == current).Count;
+                int count = list.FindAll(n => n == current).Count;
 
                 if (count % 2 == 0)
                 {
