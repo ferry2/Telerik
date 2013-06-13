@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>a1587bbc-212c-4930-99db-9f0f65ed8726</ProjectGuid>
+    <ProjectGuid>{8EAFBA4E-CFBD-4CA9-8BAE-310D925AF299}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TraverseDirectories</RootNamespace>
