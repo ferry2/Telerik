@@ -1,4 +1,7 @@
-namespace MusicStore.Migrations
+using System;
+using System.Collections.Generic;
+
+namespace MusicStore.Models.Migrations
 {
     using System.Data.Entity.Migrations;
     using MusicStore.Models;
@@ -24,6 +27,15 @@ namespace MusicStore.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            context.Albums.AddOrUpdate(
+                new AlbumModel
+                    {
+                        Title = "THE IMPOSSIBLE DREAM",
+                        Producer = "SONY MUSIC CG",
+                        ReleaseDate = DateTime.Now,                     
+                    }
+                );
         }
     }
 }

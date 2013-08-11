@@ -1,53 +1,51 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web;
-using System.Web.Http;
-using MusicStore.Models;
-
-namespace MusicStore.Controllers
+﻿namespace MusicStore.Controllers
 {
-    public class ArtistController : ApiController
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Data.Entity.Infrastructure;
+    using System.Linq;
+    using System.Net;
+    using System.Net.Http;
+    using System.Web.Http;
+    using MusicStore.Models;
+
+    public class ArtistsController : ApiController
     {
         private MusicStoreDb db = new MusicStoreDb();
 
-        // GET api/Artist
-        public IEnumerable<ArtistModel> GetArtists()
+        // GET api/Artists
+        public IEnumerable<ArtistModel> GetArtistModels()
         {
             return db.Artists.AsEnumerable();
         }
 
-        // GET api/Artist/5
-        public ArtistModel GetArtist(int id)
+        // GET api/Artists/5
+        public ArtistModel GetArtistModel(int id)
         {
-            ArtistModel artist = db.Artists.Find(id);
-            if (artist == null)
+            ArtistModel artistmodel = db.Artists.Find(id);
+            if (artistmodel == null)
             {
                 throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
             }
 
-            return artist;
+            return artistmodel;
         }
 
-        // PUT api/Artist/5
-        public HttpResponseMessage PutArtist(int id, ArtistModel artist)
+        // PUT api/Artists/5
+        public HttpResponseMessage PutArtistModel(int id, ArtistModel artistmodel)
         {
             if (!ModelState.IsValid)
             {
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
             }
 
-            if (id != artist.ArtistId)
+            if (id != artistmodel.ArtistId)
             {
                 return Request.CreateResponse(HttpStatusCode.BadRequest);
             }
 
-            db.Entry(artist).State = EntityState.Modified;
+            db.Entry(artistmodel).State = EntityState.Modified;
 
             try
             {
@@ -61,16 +59,16 @@ namespace MusicStore.Controllers
             return Request.CreateResponse(HttpStatusCode.OK);
         }
 
-        // POST api/Artist
-        public HttpResponseMessage PostArtist(ArtistModel artist)
+        // POST api/Artists
+        public HttpResponseMessage PostArtistModel(ArtistModel artistmodel)
         {
             if (ModelState.IsValid)
             {
-                db.Artists.Add(artist);
+                db.Artists.Add(artistmodel);
                 db.SaveChanges();
 
-                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, artist);
-                response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = artist.ArtistId }));
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, artistmodel);
+                response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = artistmodel.ArtistId }));
                 return response;
             }
             else
@@ -79,16 +77,16 @@ namespace MusicStore.Controllers
             }
         }
 
-        // DELETE api/Artist/5
-        public HttpResponseMessage DeleteArtist(int id)
+        // DELETE api/Artists/5
+        public HttpResponseMessage DeleteArtistModel(int id)
         {
-            ArtistModel artist = db.Artists.Find(id);
-            if (artist == null)
+            ArtistModel artistmodel = db.Artists.Find(id);
+            if (artistmodel == null)
             {
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
 
-            db.Artists.Remove(artist);
+            db.Artists.Remove(artistmodel);
 
             try
             {
@@ -99,7 +97,7 @@ namespace MusicStore.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.NotFound, ex);
             }
 
-            return Request.CreateResponse(HttpStatusCode.OK, artist);
+            return Request.CreateResponse(HttpStatusCode.OK, artistmodel);
         }
 
         protected override void Dispose(bool disposing)

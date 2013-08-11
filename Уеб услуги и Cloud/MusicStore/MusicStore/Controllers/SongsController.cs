@@ -10,7 +10,7 @@ using MusicStore.Models;
 
 namespace MusicStore.Controllers
 {
-    public class SongController : ApiController
+    public class SongsController : ApiController
     {
         private MusicStoreDb db = new MusicStoreDb();
 
@@ -33,7 +33,7 @@ namespace MusicStore.Controllers
         }
 
         // PUT api/Song/5
-        public HttpResponseMessage PutSong(int id, SongModel song)
+        public HttpResponseMessage PutSong(int id, [FromBody]SongModel song)
         {
             if (!ModelState.IsValid)
             {
@@ -60,7 +60,7 @@ namespace MusicStore.Controllers
         }
 
         // POST api/Song
-        public HttpResponseMessage PostSong(SongModel song)
+        public HttpResponseMessage PostSong([FromBody]SongModel song)
         {
             if (ModelState.IsValid)
             {

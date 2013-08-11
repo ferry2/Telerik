@@ -1,25 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web;
-using System.Web.Http;
-using MusicStore.Models;
-
 namespace MusicStore.Controllers
 {
-    public class AlbumController : ApiController
+    using System.Data.Entity.Infrastructure;
+    using System.Linq;
+    using System.Net;
+    using System.Net.Http;
+    using System.Web.Http;
+    using MusicStore.Models;
+
+    public class AlbumsController : ApiController
     {
         private MusicStoreDb db = new MusicStoreDb();
 
         // GET api/Album
         public IEnumerable<AlbumModel> GetAlbumModels()
         {
-            return db.Albums.AsEnumerable();
+            return db.Albums.Include("Artists").Include("Songs").AsEnumerable();
         }
 
         // GET api/Album/5
@@ -62,7 +60,7 @@ namespace MusicStore.Controllers
         }
 
         // POST api/Album
-        public HttpResponseMessage PostAlbum(AlbumModel album)
+        public HttpResponseMessage PostAlbum([FromBody]AlbumModel album)
         {
             if (ModelState.IsValid)
             {
